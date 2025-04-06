@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wulalawula</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      width: 280px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 16px;
+    }
+    .card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #007BFF;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .card a:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>欢迎来到 Wulalawula 的主页</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <h2>胜率记录工具</h2>
+      <p>记录每一场比赛，统计先攻/后攻胜率。</p>
+      <a href="https://www.wulalawula.com/ptcgp/record/" target="_blank">进入</a>
+    </div>
+
+    <!-- 你可以继续添加更多卡片 -->
+    <!--
+    <div class="card">
+      <h2>项目名称</h2>
+      <p>项目描述</p>
+      <a href="#">进入</a>
+    </div>
+    -->
+  </div>
+</body>
+</html>
