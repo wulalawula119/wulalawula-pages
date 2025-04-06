@@ -3,48 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <title>Wulalawula</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f2f5;
-      margin: 0;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    h1 {
-      margin-bottom: 40px;
-    }
-    .card {
-      width: 300px;
-      margin: auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card h2 {
-      padding: 20px;
-      font-size: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="/styles/cards.css" />
 </head>
 <body>
+
   <h1>欢迎来到 Wulalawula 的主页</h1>
 
-  <a class="card" href="ptcgp/">
-    <img src="https://img.pokemondb.net/artwork/large/pikachu.jpg" alt="PTCGP">
-    <h2>PTCGP 项目</h2>
-  </a>
+  <div class="card-container">
+    <!-- 实际卡片 1 -->
+    <a class="card" href="/ptcgp/">
+      <div class="image">
+        <div class="inner" style="background-image: url('/assets/images/cards_background/Pikachu.webp');"></div>
+      </div>
+      <div class="content">
+        <h2>PTCGP 项目</h2>
+      </div>
+    </a>
+
+    <!-- 实际卡片 2 -->
+    <a class="card" href="#">
+      <div class="image">
+        <div class="inner" style="background-image: url('/assets/images/cards_background/Charizard.webp');"></div>
+      </div>
+      <div class="content">
+        <h2>示例卡片</h2>
+      </div>
+    </a>
+
+    <!-- 实际卡片 2 -->
+    <a class="card" href="#">
+      <div class="image">
+        <div class="inner" style="background-image: url('/assets/images/cards_background/Lucario.webp');"></div>
+      </div>
+      <div class="content">
+        <h2>示例卡片</h2>
+      </div>
+    </a>
+
+  </div>
+
 </body>
 </html>

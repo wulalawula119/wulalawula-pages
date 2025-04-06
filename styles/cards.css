@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f9fa;
+  margin: 0;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+/* 容器固定5列 */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 固定5列 */
+  gap: 12px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px 60px; /* 加大上下和左右间距 */
+}
+
+.card {
+  width: 100%;              /* 由 grid 决定宽度 */
+  aspect-ratio: 3 / 4;      /* 保持宽高比 */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card .image {
+  flex: 3;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .image .inner {
+  width: 90%;
+  height: 90%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('assets/images/Pikachu.png'); /* 默认图可被覆盖 */
+}
+
+.card .content {
+    flex: 1;
+    padding: 12px;
+    display: flex;
+    flex-direction: column; /* 让内容垂直排列 */
+    justify-content: center;
+    text-align: center;
+}
+  
+.card .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .text h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.card .desc {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    max-width: 80%;
+    word-break: break-word;
+    text-align: center;     /* ✅ 文字内部居中 */
+    margin-left: auto;      /* ✅ 整个元素居中 */
+    margin-right: auto;
+  }  
+
+/* 空占位卡片样式（不可点击，不可 hover） */
+.card.placeholder {
+    box-shadow: none;
+    background: transparent;
+    pointer-events: none;
+}
+
+/* 页面宽度 ≤ 1400px：变成4列 */
+@media (max-width: 1400px) {
+    .card-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* 页面宽度 ≤ 1100px：变成3列 */
+  @media (max-width: 1100px) {
+    .card-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* 页面宽度 ≤ 800px：变成2列 */
+  @media (max-width: 800px) {
+    .card-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* 页面宽度 ≤ 500px：变成1列 */
+  @media (max-width: 500px) {
+    .card-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }

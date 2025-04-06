@@ -3,70 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <title>PTCGP 工具</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f9fa;
-      margin: 0;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    h1 {
-      margin-bottom: 40px;
-    }
-    .card {
-      width: 300px;
-      margin: auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card .content {
-      padding: 20px;
-    }
-    .card .content h2 {
-      margin: 0 0 10px;
-    }
-    .card .content p {
-      color: #555;
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-    .card .content a {
-      display: inline-block;
-      padding: 8px 16px;
-      background: #007bff;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-    .card .content a:hover {
-      background: #0056b3;
-    }
-  </style>
+  <link rel="stylesheet" href="/styles/cards.css" />
 </head>
 <body>
   <h1>PTCGP 工具列表</h1>
 
-  <div class="card">
-    <img src="https://img.pokemondb.net/sprites/home/normal/pikachu.png" alt="胜率记录工具">
-    <div class="content">
-      <h2>胜率记录工具</h2>
-      <p>记录并分析你每一场比赛的胜负情况和先后手胜率。</p>
-      <a href="https://www.wulalawula.com/ptcgp/record/">进入</a>
-    </div>
+  <div class="card-container">
+    <!-- 实际卡片 1 -->
+    <a class="card" href="https://www.wulalawula.com/ptcgp/record/">
+      <div class="image">
+        <div class="inner" style="background-image: url('/assets/images/cards_background/Tinkaton.webp');"></div>
+      </div>
+      <div class="content">
+        <h2>胜率记录工具</h2>
+        <p class="desc">记录并分析你每一场比赛的胜负情况和先后手胜率。</p>
+      </div>
+    </a>
+
+    <!-- 实际卡片 2 -->
+    <a class="card" href="#">
+      <div class="image">
+        <div class="inner" style="background-image: url('/assets/images/cards_background/Clodsire.webp');"></div>
+      </div>
+      <div class="content">
+        <h2>示例卡片</h2>
+      </div>
+    </a>
   </div>
 </body>
 </html>
